@@ -1,0 +1,80 @@
+
+:root{
+    
+    /* colors */
+    --primary: #3BCEA3;
+    --primary-light: #D6F5EC;
+    --secondary: #3548ae;
+    --dark: #151E1B;
+    --light: #F4F6F5;
+    
+}
+/* font-family */
+@font-face {
+    font-family: DMsans_Regular;
+    src: url(/fonts/DMSans_Regular.ttf);
+}
+@font-face {
+    font-family: DMsans_Bold;
+    src: url(/fonts/DMSans_Bold.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Header */
+.nav__bar,.nav__menu,.nav__list,.nav__login{
+    display: flex;
+    align-items: center;
+}
+.nav__bar{
+    background-color: var(--light);
+    height: 5rem;
+    justify-content: center;
+}
+.app__logo{
+    margin-right: 2rem;
+}
+.nav__list{
+    list-style: none;
+}
+.nav__item>a{
+    color: var(--dark);
+    font-family: 'DMsans_Bold';
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav__item{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.nav__login{
+    margin-left: 20px;
+}
+.nav__btns{
+    color: var(--dark);
+    font-family: DMsans_Bold;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 30px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 13px;
+    cursor: pointer;
+    
+}
+.login_show{
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+/* .nav__item .item_un{
+    position: relative;
+    background-color: var(--primary);
+    height: 2px;
+}    */
