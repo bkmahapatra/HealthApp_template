@@ -1,15 +1,4 @@
 
-:root{
-    
-    /* colors */
-    --primary: #3BCEA3;
-    --primary-light: #D6F5EC;
-    --secondary: #3548ae;
-    --dark: #151E1B;
-    --light: #F4F6F5;
-    
-}
-/* font-family */
 @font-face {
     font-family: DMsans_Regular;
     src: url(/fonts/DMSans_Regular.ttf);
@@ -19,12 +8,41 @@
     src: url(/fonts/DMSans_Bold.ttf);
 }
 
+:root{
+    /* font-family */
+    --app-font-regular: 'DMsans_Regular';
+    --app-font-bold: 'DMsans_Bold'; 
+
+    /* colors */
+    --primary: #3BCEA3;
+    --primary-light: #D6F5EC;
+    --secondary: #3548ae;
+    --dark: #151E1B;
+    --light: #F4F6F5;
+
+    /* 0.5rem= 8px, 1rem=16px ...*/
+    --big-font-size: 3rem;
+    --h1-font-size: 4.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.124rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    
+}
+
+
 *{
     box-sizing: border-box;
     margin: 0;
 }
+body{
+    font-family: var(--app-font-regular);
+    width: 100%;
+}
 
-/* Header */
+/* ----------------------Header------------------- */
+
 .nav__bar,.nav__menu,.nav__list,.nav__login{
     display: flex;
     align-items: center;
@@ -42,7 +60,7 @@
 }
 .nav__item>a{
     color: var(--dark);
-    font-family: 'DMsans_Bold';
+    font-family: var(--app-font-bold);
     text-decoration: none;
     font-size: 14px;
 }
@@ -55,7 +73,7 @@
 }
 .nav__btns{
     color: var(--dark);
-    font-family: DMsans_Bold;
+    font-family: var(--app-font-bold);
     margin-left: 5px;
     margin-right: 5px;
     height: 30px;
@@ -78,3 +96,58 @@
     background-color: var(--primary);
     height: 2px;
 }    */
+
+/* ----------------------Find Doctor------------------- */
+
+.find_doc_container{
+    background-color: var(--light);
+    display: flex;
+    padding-left: 3rem ;
+    padding-right: 3rem;
+    padding-top: 1.5rem;
+}
+.doc_content{
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 100px;
+}
+.doctor_img img{
+    height: 80vh;
+}
+.doctor_text{
+    font-family: var(--app-font-bold);
+    font-size: 13px;
+}
+.doctor_title{
+    font-size: var(--h1-font-size);
+    font-family: var(--app-font-bold);
+    color: var(--secondary);
+}
+
+.doctor_description{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.doctor_features{
+    display: flex;
+}
+.doc_feature_container{
+    display: flex;
+    align-items: center;
+    margin-top: 1.2rem;
+    margin-right: 1.3rem;
+}
+.doc_feature_text{
+    padding-left: 0.5rem;
+}
+
+.doc_search{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 40px;
+    height: 3.5rem;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
