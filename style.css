@@ -1,17 +1,17 @@
-
 @font-face {
     font-family: DMsans_Regular;
     src: url(/fonts/DMSans_Regular.ttf);
 }
+
 @font-face {
     font-family: DMsans_Bold;
     src: url(/fonts/DMSans_Bold.ttf);
 }
 
-:root{
+:root {
     /* font-family */
     --app-font-regular: 'DMsans_Regular';
-    --app-font-bold: 'DMsans_Bold'; 
+    --app-font-bold: 'DMsans_Bold';
 
     /* colors */
     --primary: #3BCEA3;
@@ -19,6 +19,7 @@
     --secondary: #3548ae;
     --dark: #151E1B;
     --light: #F4F6F5;
+    --placeholder-text-color:rgb(179, 178, 178);
 
     /* 0.5rem= 8px, 1rem=16px ...*/
     --big-font-size: 3rem;
@@ -28,57 +29,79 @@
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
-    
+
 }
 
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
-body{
+
+body {
     font-family: var(--app-font-regular);
-    width: 100%;
 }
-input{
+
+input {
     border: none;
 }
+input::placeholder{
+    font-family: var(--app-font-bold);
+    color: var(--placeholder-text-color);
+}
 input:focus-visible {
+    font-family: var(--app-font-bold);
+
     outline: none;
     outline-style: none;
-    
+
 }
+
+section {
+    width: 100%;
+}
+
 /* ----------------------Header------------------- */
 
-.nav__bar,.nav__menu,.nav__list,.nav__login{
+.nav__bar,
+.nav__menu,
+.nav__list,
+.nav__login {
     display: flex;
     align-items: center;
 }
-.nav__bar{
+
+.nav__bar {
     background-color: var(--light);
     height: 5rem;
     justify-content: center;
 }
-.app__logo{
+
+.app__logo {
     margin-right: 2rem;
 }
-.nav__list{
+
+.nav__list {
     list-style: none;
 }
-.nav__item>a{
+
+.nav__item>a {
     color: var(--dark);
     font-family: var(--app-font-bold);
     text-decoration: none;
     font-size: 14px;
 }
-.nav__item{
+
+.nav__item {
     margin-left: 10px;
     margin-right: 10px;
 }
-.nav__login{
+
+.nav__login {
     margin-left: 20px;
 }
-.nav__btns{
+
+.nav__btns {
     color: var(--dark);
     font-family: var(--app-font-bold);
     margin-left: 5px;
@@ -91,12 +114,15 @@ input:focus-visible {
     border-radius: 15px;
     font-size: 13px;
     cursor: pointer;
-    
+
 }
-.login_show{
+
+.login_show {
     background-color: var(--primary);
     color: var(--light);
 }
+
+
 
 /* .nav__item .item_un{
     position: relative;
@@ -106,87 +132,109 @@ input:focus-visible {
 
 /* ----------------------Find Doctor------------------- */
 
-.find_doc_container{
+.find_doc_container {
     background-color: var(--light);
     display: flex;
-    padding-left: 3rem ;
+    padding-left: 3rem;
     padding-right: 3rem;
     padding-top: 1.5rem;
 }
-.doc_content{
+
+.doc_content {
     margin-top: 50px;
     margin-left: 40px;
     margin-right: 100px;
 }
-.doctor_img img{
+
+.doctor_img img {
     height: 80vh;
 }
-.doctor_text{
+
+.doctor_text {
     font-family: var(--app-font-bold);
     font-size: 13px;
 }
-.doctor_title{
+
+.doctor_title {
     font-size: var(--h1-font-size);
     font-family: var(--app-font-bold);
     color: var(--secondary);
 }
 
-.doctor_description{
+.doctor_description {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
-.doctor_features{
+.doctor_features {
     display: flex;
 }
-.doc_feature_container{
+
+.doc_feature_container {
     display: flex;
     align-items: center;
     margin-top: 1.2rem;
     margin-right: 1.3rem;
 }
-.doc_feature_text{
+
+.doc_feature_text {
     padding-left: 0.5rem;
 }
-
-.doc_search{
+.doctor_search{
+    margin-top: 3rem;
     display: flex;
     align-items: center;
     background-color: white;
-    border-radius: 40px;
-    height: 3.5rem;
-    margin-top: 2rem;
-    justify-content: space-between;
+    border-radius: 30px;
+    position: relative;
+    padding: 15px;
+}
+.location_label{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-right: 40px;
+    color: var(--placeholder-text-color);
+    border-right: 2px solid var(--placeholder-text-color);
+    font-family: var(--app-font-bold);
+}
+.doc_search_btn{
+    position: absolute;
+    right: 15px;
 }
 
+
 /* ----------------------consulation------------------- */
-.box_container{
+.box_container {
     width: 100%;
     margin-top: 5rem;
     display: flex;
-    
+
     padding-left: 4rem;
     padding-right: 3rem;
-    
+
 }
-.box_container img{
+
+.box_container img {
     height: 70vh;
     width: 40wh;
 }
-.in_container{
+
+.in_container {
     margin-top: 3rem;
     margin-right: 4rem;
-    margin-left: 4rem;  
+    margin-left: 4rem;
 }
 
-.container_title{
+.container_title {
     font-size: var(--h2-font-size);
     color: var(--secondary);
 }
-.container_content{
+
+.container_content {
     margin-top: 2rem;
 }
-.container_button{
+
+.container_button {
     background-color: var(--primary);
     border-radius: 30px;
     width: fit-content;
@@ -199,61 +247,181 @@ input:focus-visible {
 
     margin-top: 2rem;
 }
+
 /* pharmacy */
 .pharmacy .container_image {
     margin-right: 3rem;
 }
 
-.download{
+
+
+/* top doctors */
+.top_doctors,
+.top_articles {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.box_title {
+    max-width: 700px;
+}
+
+.box_title,
+.box_sub_title {
+    text-align: center;
+}
+
+.container_sub_title {
+    margin-top: 1rem;
+    font-size: 15px;
+}
+
+.doctors_list,
+.article_items {
+    margin-left: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    max-width: 90%;
+
+}
+
+.doc_item_img {
+    width: 90%;
+}
+
+.item h4,
+p {
+    margin-top: 5px;
+    color: var(--dark);
+}
+
+.item h4 {
+    font-size: 15px;
+}
+
+.doc_item p {
+    font-size: 14px;
+}
+
+/* articles */
+.article_item_img {
+    max-width: 90%;
+}
+.article_item_title{
+    margin-right: 15px;
+}
+.article_item_img_desc{
+    color: var(--secondary);
+    font-family: var(--app-font-bold);
+}
+
+/* download */
+.download {
     background-color: var(--light);
 }
-.download_title{
-    margin-top: 3.5rem;
+.download_container{
+    margin-right: 2rem;
+    padding-bottom: 5rem;
 }
-.getlink_heading{
+.download_title {
+    margin-top: 3.5rem;
+    
+}
+
+.getlink_heading {
     margin-top: 20px;
     margin-bottom: 10px;
     color: var(--secondary);
     font-family: var(--app-font-bold);
 }
 
-.download_stores{
+.download_stores {
     margin-top: 2rem;
 }
-.download_stores img{
+
+.download_stores img {
     height: 50px;
 }
-
-/* top doctors */
-.top_doctors{
-    margin-top: 5rem;
+.ph_num{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 30px;
+    padding-left: 10px;
+    width: 100%;
 }
-.top_doctors h2,h3{
-    text-align: center;
-}
-.container_sub_title{
-    margin-top: 1rem;
-    font-size: 15px;
-}
-.doctors_list{
-    margin-left: 2rem;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    display: flex;
+.ph_num span{
+    color: rgb(97, 97, 97);
     
 }
-.doc_item_img{
-    width: 90%;
+
+.download_btn{
+    margin: 0;
+    margin: 5px;
 }
-.doc_item h4,p{
-    margin-top: 5px;
-    color: var(--dark);
-}
-.doc_item p{
-    font-size: 14px;
+/* footer */
+.footer {
+    background-color: var(--dark);
+    color: var(--light);
+    padding-top: 3rem;
 }
 
+.footer a {
+    text-decoration: none;
+    color: var(--light);
+}
 
+.app_address,.app_contact_no  {
+    color: var(--light);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.media-link{
+    padding: 5px;
+}
+.app_contact {
+    margin-right: 20px;
+
+}
+
+.footer_contents {
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: .5fr 2fr 1fr 1fr 1fr 2fr 0.5fr;
+}
+
+.foot_item_title {
+    font-family: var(--app-font-bold);
+    font-size: 15px;
+    margin-bottom: 1rem;
+}
+
+.foot_item_content {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+.subscribe_mail{
+    width: 100%;
+    background-color: var(--light);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+.subscribe_mail img{
+    padding: 5px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

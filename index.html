@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -89,12 +89,10 @@
                         </div>
                     </div>
                     <div class="doctor_search">
-                        <div class="doc_search">
-                            <div class="search_location_text"><img src="/images/Location.png" alt="">Location</div>
-                            <input type="text" name="" id="search_item"
-                                placeholder="Search doctors, clinics, hospitals etc.">
-                            <div class="search_btn"><img src="/images/Search button.png" alt=""></div>
-                        </div>
+                        <img class="location_icon" src="/images/Location.png" alt="">
+                        <div class="location_label">Location</div>
+                        <div class="location_input"><input type="text" name="lcation" id="location" placeholder="Search doctors, hospitals, clinics etc." size="50"></div>
+                        <img class="doc_search_btn" src="/images/Search button.png" alt="">
                     </div>
                 </div>
             </div>
@@ -115,29 +113,29 @@
         </section>
 
         <section class="top_doctors" id="top_doctors">
-            
+
             <div>
-                <h2 class="container_title topdoc_title">Consult Top Doctors Online For </h2>
-                <h2 class="container_title topdoc_title">Any Health Concern</h2>
+                <h2 class="container_title box_title">Consult Top Doctors Online For Any Health Concern</h2>
+                <h2 class="container_title topdoc_title"></h2>
             </div>
-            <h3 class="container_sub_title">Private online sonculations with verified doctors in all specialists</h3>
+            <h3 class="box_sub_title">Private online sonculations with verified doctors in all specialists</h3>
             <div class="doctors_list">
-                <div class="doc_item">
+                <div class="doc_item item">
                     <img class="doc_item_img" src="/images/doc1.png" alt="">
                     <h4 class="doc_item_title">Dr. Rachel Foose</h4>
                     <p class="doc_item_type">Professional Dentist</p>
                 </div>
-                <div class="doc_item">
+                <div class="doc_item item">
                     <img class="doc_item_img" src="/images/doc2.png" alt="">
                     <h4 class="doc_item_title">Dr. Geoffrey Mott</h4>
                     <p class="doc_item_type">Professional Dentist</p>
                 </div>
-                <div class="doc_item">
+                <div class="doc_item item">
                     <img class="doc_item_img" src="/images/doc3.png" alt="">
                     <h4 class="doc_item_title">Dr. Georgette Strobel</h4>
                     <p class="doc_item_type">Professional Dentist</p>
                 </div>
-                <div class="doc_item">
+                <div class="doc_item item">
                     <img class="doc_item_img" src="/images/doc4.png" alt="">
                     <h4 class="doc_item_title">Dr. Augustina MidgettD</h4>
                     <p class="doc_item_type">Professional Dentist</p>
@@ -147,14 +145,28 @@
         </section>
 
         <section class="top_articles" id="top_articles">
-            <h2 class="container_title">Read Top Articles From Health Experts</h2>
-            <h3 class="container_sub_title">Health articles that keep you informed about good health practices and
+            <h2 class="container_title box_title">Read Top Articles From Health Experts</h2>
+            <h3 class="box_sub_title">Health articles that keep you informed about good health practices and
                 achieve your goals.</h3>
             <div class="article_items">
-                <img class="article_item_img" src="" alt="">
-                <div class="article_item_img_desc"></div>
-                <h4 class="article_item_title"></h4>
-                <div class="article_item_docname"></div>
+                <div class="article_item item">
+                    <img class="article_item_img item" src="/images/coronavirus.JPG" alt="">
+                    <div class="article_item_img_desc">CORONAVIRUS</div>
+                    <h4 class="article_item_title">12 Coronavirus Myths and Facts That You Should Be Aware Of</h4>
+                    <p class="article_item_docname">Dr. Rochel Foose </p>
+                </div>
+                <div class="article_item item">
+                    <img class="article_item_img" src="/images/vege.JPG" alt="">
+                    <div class="article_item_img_desc">VITAMINS AND SUPPLIMENTS</div>
+                    <h4 class="article_item_title">10 Fruits You Must Try In Monsoon Season.</h4>
+                    <p class="article_item_docname">Dr. Rochel Foose </p>
+                </div>
+                <div class="article_item item">
+                    <img class="article_item_img" src="/images/gym.JPG" alt="">
+                    <div class="article_item_img_desc">FITNESS AND HEALTHS</div>
+                    <h4 class="article_item_title">This 5 Excercise will help you to gain Six abse.</h4>
+                    <p class="article_item_docname">Dr. Rochel Foose </p>
+                </div>
             </div>
             <div class="container_button article_see_all">See All Articles</div>
 
@@ -198,7 +210,7 @@
                 <div class="ph_num">
                     <div>
                         <span>+91</span>
-                        <input type="number" name="" id="ph_num" maxlength="10">
+                        <input type="number" name="" id="ph_num" max="10" placeholder="Enter Phone Number">
                     </div>
                     <div class="container_button download_btn">Get The Link</div>
                 </div>
@@ -213,54 +225,52 @@
 
         <section class="footer" id="footer">
             <div class="footer_contents">
+                <div> </div>
                 <div class="app_contact">
                     <img src="/images/logo-dark.png" alt="">
                     <p class="app_address">2972 Westheimer Rd, Santa Ana, Ilinois 85486 </p>
                     <div class="app_contact_no">+91 (903) 134-55-26</div>
                     <div class="app_medial_links">
-
                         <a href="" class="facebook media-link"><img src="/images/Facebook.png" alt=""></a>
                         <a href="" class="facebook media-link"><img src="/images/Instagram.png" alt=""></a>
                         <a href="" class="facebook media-link"><img src="/images/LinkedIn.png" alt=""></a>
                         <a href="" class="facebook media-link"><img src="/images/Twitter.png" alt=""></a>
                     </div>
                 </div>
-                <a class="for_patients">
+                <div class="for_patients">
                     <div class="foot_item_title">For Patients</div>
                     <a href="" class="foot_item_content">Search Doctor</a>
                     <a href="" class="foot_item_content">Search Clinics</a>
                     <a href="" class="foot_item_content">Search Hospitals</a>
                     <a href="" class="foot_item_content">Read Health Blog</a>
-            </div>
-            <div class="for_doctors">
-                <div class="foot_item_title">For Doctors</div>
-                <a href="" class="foot_item_content">Manage Profile</a>
-
-                <div class="foot_item_title">For Clinics</div>
-                <a href="" class="foot_item_content">Manage Profile</a>
-                <a href="" class="foot_item_content">Reach</a>
-            </div>
-            <div class="for_hospitals">
-                <div class="foot_item_title">For Hospitals</div>
-                <a href="" class="foot_item_content">Try Pro Features</a>
-                <a href="" class="foot_item_content">Manage Profile</a>
-                <a href="" class="foot_item_content">Reach</a>
-            </div>
-            <div class="subcribe">
-                <div class="foot_item_title">Subscribe</div>
-                <a href="" class="foot_item_content">Subscribe to get the latest news From us.</a>
-                <div class="subcribe_mail">
-                    <input type="email" name="" id="sub_email" placeholder="Email Address">
-                    <img src="/images/arrow.png" alt="">
                 </div>
+                <div class="for_doctors">
+                    <div class="foot_item_title">For Doctors</div>
+                    <a href="" class="foot_item_content">Manage Profile</a>
+
+                    <div class="foot_item_title">For Clinics</div>
+                    <a href="" class="foot_item_content">Manage Profile</a>
+                    <a href="" class="foot_item_content">Reach</a>
+                </div>
+                <div class="for_hospitals">
+                    <div class="foot_item_title">For Hospitals</div>
+                    <a href="" class="foot_item_content">Try Pro Features</a>
+                    <a href="" class="foot_item_content">Manage Profile</a>
+                    <a href="" class="foot_item_content">Reach</a>
+                </div>
+                <div class="subcribe">
+                    <div class="foot_item_title">Subscribe</div>
+                    <a href="" class="foot_item_content">Subscribe to get the latest news From us.</a>
+                    <div class="subscribe_mail">
+                        <input type="email" name="" id="sub_email" placeholder="Email Address">
+                        <img src="/images/arrow.png" alt="">
+                    </div>
+                </div>
+                <div> </div>
             </div>
-    </div>
-    <div class="copyright">Copyright &copy; 2017, Practo. All rights reserved. </div>
-    </section>
+            <div class="copyright">Copyright &copy; 2017, Practo. All rights reserved. </div>
+        </section>
     </div>
 </body>
 
 </html>
-
-<!--  
-        </section> -->
