@@ -121,7 +121,9 @@ section {
     background-color: var(--primary);
     color: var(--light);
 }
-
+.showbar{
+    border-bottom: 2px solid var(--primary);
+}
 
 
 /* .nav__item .item_un{
