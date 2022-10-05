@@ -447,7 +447,7 @@ p {
 }
 
 .subscribe_mail {
-    width: 100%;
+    width: 90%;
     background-color: var(--light);
     border-radius: 20px;
     display: flex;
@@ -466,9 +466,12 @@ p {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-.menu__btn,.menu__close{
+
+.menu__btn,
+.menu__close {
     display: none;
 }
+
 @media only screen and (max-width: 900px) {
 
     .nav__bar {
@@ -517,7 +520,7 @@ p {
         font-size: 30px;
         justify-content: center;
     }
-   
+
     .nav__list a {
         color: var(--light);
         font-size: 20px;
@@ -526,13 +529,14 @@ p {
     .nav__links {
         color: rgb(184, 180, 180);
     }
-    .nav__login{
+
+    .nav__login {
         margin-top: 10px;
         padding-left: 10px;
         justify-content: flex-end;
         align-items: center;
     }
-    
+
     .nav__item:hover a {
         color: var(--dark);
     }
@@ -541,21 +545,87 @@ p {
         padding: 5px;
     }
 
-    .menu__close{
-        display:block;
+    .menu__close {
+        display: block;
     }
+
     .nav__logo {
         font-weight: var(--font-bold);
         font-size: 25px;
         padding-left: 5px;
     }
 
-    .nav__btns{
+    .nav__btns {
         color: var(--light);
         font-size: 20px;
     }
-    .nav__btns:hover{
+
+    .nav__btns:hover {
         color: var(--dark);
     }
-    
+
+}
+
+@media only screen and (max-width: 700px) {
+    .find_doctor {
+        padding-top: 1rem;
+        max-width: fit-content;
+    }
+
+    .find_doc_container {
+        flex-direction: column-reverse;
+        margin-top: 0px;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        padding-top: 0rem;
+    }
+
+    .doctor_title {
+        font-size: 50px;
+        
+    }
+
+    .doc_content {
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 0px;
+        max-width: 100%;
+    }
+
+    .doctor_img img {
+        height: 50vh;
+    }
+    .doctor_features{
+        display: block;
+    }
+    .box_container{
+        flex-direction: column;
+        
+    }
+    .box_container img {
+        height: 40vh;
+        width: 40wh;
+    }
+    .in_container {
+        margin-top: 2rem;
+        margin-right: 0rem;
+        margin-left: 0rem;
+        width: 100%;
+    }
+    .container_title {
+        font-size: 30px;
+        color: var(--secondary);
+    }
+
+    .download_stores img {
+        height: 50px;
+    }
+    .footer_contents {
+        margin-bottom: 5rem;
+        display: grid;
+        padding-left: 20px;
+        row-gap: 10px;
+        grid-template-columns: auto ;
+    }
+
 }

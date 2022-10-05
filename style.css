@@ -425,7 +425,7 @@ p {
     margin-bottom: 0.8rem;
 }
 .subscribe_mail{
-    width: 100%;
+    width: 90%;
     background-color: var(--light);
     border-radius: 20px;
     display: flex;
