@@ -27,11 +27,13 @@
     --big-font-size: 3rem;
     --h1-font-size: 4.5rem;
     --h2-font-size: 2.8rem;
-    --h3-font-size: 1.124rem;
-    --normal-font-size: .938rem;
+    --h3-font-size: 1rem; 
+    
+    /* 14px */
+    --normal-font-size: .8rem;
     --small-font-size: .813rem;
     --smaller-font-size: .75rem;
-
+    
 }
 
 
@@ -74,7 +76,7 @@ section {
 .baner_img img,
 .article_item_img,
 .doc_item_img {
-    width: 100%;
+    width: 90%;
     height: auto;
 }
 
@@ -112,7 +114,7 @@ section {
     color: var(--dark);
     font-family: var(--app-font-bold);
     text-decoration: none;
-    font-size: 14px;
+    font-size: var(--normal-font-size);
 }
 
 .nav__item {
@@ -135,7 +137,7 @@ section {
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    font-size: 13px;
+    font-size: var(--small-font-size);
     cursor: pointer;
 
 }
@@ -302,9 +304,9 @@ section {
     color: var(--text-light);
 }
 
-.container_sub_title {
+.box_sub_title {
     margin-top: 1rem;
-    font-size: 15px;
+    font-size: var(--small-font-size);
 }
 
 .doctors_list,
@@ -328,25 +330,30 @@ p {
 }
 
 .item h4 {
-    font-size: 15px;
+    font-size: var(--h3-font-size);
 }
-
+.item{
+    width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 .doc_item p {
-    font-size: 14px;
+    font-size: var(--h3-font-size);
 }
 
 /* articles */
 .article_item_img {
-    max-width: 90%;
+    width: 100%;
 }
 
 .article_item_title {
-    margin-right: 15px;
+    /* margin-right: 15px; */
 }
 
 .article_item_img_desc {
     color: var(--secondary);
     font-family: var(--app-font-bold);
+    font-size: var(--smaller-font-size);
 }
 
 /* download */
@@ -435,12 +442,12 @@ p {
 
 .foot_item_title {
     font-family: var(--app-font-bold);
-    font-size: 15px;
+    font-size: var(--normal-font-size);
     margin-bottom: 1rem;
 }
 
 .foot_item_content {
-    font-size: 12px;
+    font-size: var(--small-font-size);
     display: block;
     margin-bottom: 0.8rem;
     color: var(--text-white-light);
@@ -462,7 +469,7 @@ p {
 
 .copyright {
     text-align: center;
-    font-size: 10px;
+    font-size: var(--smaller-font-size);
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -567,9 +574,28 @@ p {
 }
 
 @media only screen and (max-width: 700px) {
+    :root{
+        /* 0.5rem= 8px, 1rem=16px ...*/
+    --big-font-size: 3rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.8rem;
+    --h3-font-size: 1rem; 
+    /* 14px */
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    }
     .find_doctor {
         padding-top: 1rem;
         max-width: fit-content;
+    }
+
+    .location_label {
+        display: none;
+    }
+
+    input {
+        width: 100px;
     }
 
     .find_doc_container {
@@ -582,7 +608,7 @@ p {
 
     .doctor_title {
         font-size: 50px;
-        
+
     }
 
     .doc_content {
@@ -595,23 +621,40 @@ p {
     .doctor_img img {
         height: 50vh;
     }
-    .doctor_features{
+
+    .doctor_features {
         display: block;
     }
-    .box_container{
+
+    .box_container {
         flex-direction: column;
-        
+        padding-left: 1rem;
+        padding-right: 1rem;
+
     }
+
+    .doctors_list,
+    .article_items {
+        margin-left: 2rem;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        display: flex;
+        max-width: 90%;
+
+    }
+
     .box_container img {
         height: 40vh;
         width: 40wh;
     }
+
     .in_container {
         margin-top: 2rem;
         margin-right: 0rem;
         margin-left: 0rem;
         width: 100%;
     }
+
     .container_title {
         font-size: 30px;
         color: var(--secondary);
@@ -620,12 +663,63 @@ p {
     .download_stores img {
         height: 50px;
     }
+
     .footer_contents {
         margin-bottom: 5rem;
         display: grid;
         padding-left: 20px;
         row-gap: 10px;
-        grid-template-columns: auto ;
+        grid-template-columns: auto;
     }
 
+}
+
+/* Dropdown Button */
+.dropbtn {
+
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+    /* background-color: #2980B9; */
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
 }

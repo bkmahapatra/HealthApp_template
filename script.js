@@ -26,3 +26,29 @@ menubtn.addEventListener("click",()=>{
 navclose.addEventListener('click',()=>{
     navmenu.classList.remove("menu__show");
 })
+
+// dropdown
+const dropbtn=document.querySelectorAll(".dropbtn");
+// dropbtn.addEventListener("click",()=>{
+//     document.getElementById("myDropdown").classList.toggle("show");
+// })
+dropbtn.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        
+        btn.nextElementSibling.classList.toggle("show");
+    })
+})
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
