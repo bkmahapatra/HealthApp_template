@@ -1,11 +1,11 @@
 @font-face {
     font-family: DMsans_Regular;
-    src: url(/fonts/DMSans_Regular.ttf);
+    src: url(./fonts/DMSans_Regular.ttf);
 }
 
 @font-face {
     font-family: DMsans_Bold;
-    src: url(/fonts/DMSans_Bold.ttf);
+    src: url(./fonts/DMSans_Bold.ttf);
 }
 
 :root {
